@@ -25,3 +25,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+
+# Tu regardes pas mes secrets, c'est pas cool
+/config/secrets.yml
