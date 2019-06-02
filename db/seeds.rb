@@ -5,3 +5,33 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+10.times do |blog|
+Blog.create!(
+	title: "My Blog Post #{blog}", 
+	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est a tortor tincidunt mattis. Aenean dictum tellus vitae varius varius. Praesent sodales consequat neque nec vestibulum. Cras fringilla erat nibh, quis rutrum magna tempus in. Aenean auctor tempus tellus, eget hendrerit lacus laoreet ut. Nam tristique elementum nisl vel placerat. Vivamus id quam vitae eros convallis auctor ac sed lacus. Vestibulum id nisl libero. Nunc a metus in diam luctus imperdiet eu ac dui. Pellentesque fringilla ante sed dui eleifend, id vehicula dolor dignissim. Nulla egestas dolor at justo scelerisque, vel bibendum libero ultricies. Vivamus fringilla, odio ut rutrum euismod, est orci pulvinar arcu, sit amet dignissim enim lectus eu eros. Quisque fringilla interdum risus, accumsan bibendum augue dapibus vitae. Aliquam venenatis ullamcorper nisl at congue. "
+	)
+end
+puts "10 blogs"
+
+5.times do |skill|
+	Skill.create!(
+		title: "Rails #{skill}",
+		percent_utilized: 15
+		)
+end
+puts "5 blogs"
+
+
+9.times do |portfolio|
+	Portfolio.create!(
+		title: "Portfolio title #{portfolio}",
+		subtitle: "My great service",
+		body: "Suspendisse sit amet porttitor augue, eget tincidunt turpis. Donec quis nisl ultrices, porttitor mauris eget, pulvinar arcu. Donec maximus libero sed massa pretium vestibulum. Nulla facilisi. Suspendisse vitae rutrum sem, quis dictum neque. Curabitur sit amet lectus at erat lobortis faucibus. Fusce tempus nisl augue, sit amet pharetra nunc elementum non. Curabitur vel magna consequat, pulvinar tortor luctus, tempus tellus. ", 
+		main_image: "https://via.placeholder.com/350x200", 
+		thumb_image: "https://via.placeholder.com/600x400"
+		)
+end
+puts "9 portfolio items"
+
