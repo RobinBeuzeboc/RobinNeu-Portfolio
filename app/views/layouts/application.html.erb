@@ -21,7 +21,5 @@
 
     <%= yield %>
     <!-- PAS d'affichage si pas de yield => pas de données -->
-    <% if session[:source] %>
-     <p> Thanks for visiting me from <%= session[:source] %> </p>
-    <%end%>
+    <%= source_helper("application") %>
 </html>
