@@ -61,3 +61,4 @@ gem 'sprockets-rails', '~> 3.2'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
+gem 'kjaald_view_tool', git: 'https://github.com/RobinBeuzeboc/kjaald_view_tool'
