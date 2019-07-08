@@ -56,3 +56,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'bootstrap', '~> 4.3.1'
+gem 'sprockets-rails', '~> 3.2'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+gem 'kjaald_view_tool', git: 'https://github.com/RobinBeuzeboc/kjaald_view_tool'
