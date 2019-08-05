@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> <%= @page_title %> </title> 
@@ -11,9 +11,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -22,19 +22,16 @@
 
             <%= render "shared/application_nav"%>
 
-            <%= login_helper %>
-
             <%= yield %>
             <!-- PAS d'affichage si pas de yield => pas de données -->
-            <br></br>
-            <%= copyright_generator %>
+            <%= render "shared/application_footer"%>
 
             <%= source_helper("application") %>
 
         </div>
 
-      </div>
-
     </div>
-    </body>
+
+</div>
+</body>
 </html>
