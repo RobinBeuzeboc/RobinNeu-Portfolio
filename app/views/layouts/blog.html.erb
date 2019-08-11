@@ -14,20 +14,9 @@
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'blogs', 'data-turbolinks-track': 'reload' %>
 </head>
-
-<!-- Start of nav -->
 <body>
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">New features</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-          <a class="nav-link" href="#">About</a>
-      </nav>
-  </div>
-</div>
+<!-- Start of nav -->
+<%= render 'shared/blog_nav' %>
 <!-- end of nav -->
 
 <!-- Start of blog header -->
@@ -48,7 +37,7 @@
       <!-- end of container and row elems  -->
       
 
-      <%= login_helper %>
+     
 
 
       <%= yield %>
