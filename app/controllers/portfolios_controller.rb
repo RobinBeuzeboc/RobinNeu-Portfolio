@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
   layout "portfolio"
-    access all: [:show, :index, :angular], user: {except: [:destroy, :new, :update, :edit]}, company_admin: :all
+    access all: [:show, :index, :angular], user: {except: [:destroy, :new, :update, :edit]}, site_admin: :all
 
 
 
@@ -20,7 +20,7 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-
+    @portfolio_item = Portfolio.new(portfolio_params)
     respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
