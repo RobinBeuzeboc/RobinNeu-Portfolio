@@ -1,12 +1,19 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
   layout "portfolio"
-    access all: [:show, :index, :angular], user: {except: [:destroy, :new, :update, :edit]}, site_admin: :all
-
+   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
 
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
   end
 
   def angular
@@ -17,38 +24,38 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new
     3.times { @portfolio_item.technologies.build}
 # 3 instances d'items de portfolios avec des technos pour les rendre disponibles 
-  end
+end
 
-  def create
-    @portfolio_item = Portfolio.new(portfolio_params)
-    respond_to do |format|
-      if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
-      else
-        format.html { render :new }
-      end
+def create
+  @portfolio_item = Portfolio.new(portfolio_params)
+  respond_to do |format|
+    if @portfolio_item.save
+      format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
+    else
+      format.html { render :new }
     end
   end
+end
 
-  def edit
-  end
+def edit
+end
 
-  def update
-    respond_to do |format|
-      if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'The record successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+def update
+  respond_to do |format|
+    if @portfolio_item.update(portfolio_params)
+      format.html { redirect_to portfolios_path, notice: 'The record successfully updated.' }
+    else
+      format.html { render :edit }
     end
   end
+end
 
 
-  def show
-  end 
+def show
+end 
 
-  
-  def destroy
+
+def destroy
     # Perform the lookup
 
     # Destroy/delete the record
@@ -69,11 +76,11 @@ class PortfoliosController < ApplicationController
 
     def portfolio_params
       params.require(:portfolio).permit(:title, 
-                                        :subtitle, 
-                                        :body, 
-                                        technologies_attributes: [:name]
-                                        )
+        :subtitle, 
+        :body, 
+        technologies_attributes: [:name]
+        )
     end
-   
+    
 
-end
+  end
