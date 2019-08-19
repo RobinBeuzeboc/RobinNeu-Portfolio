@@ -1,23 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Blogs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Content</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="col-sm-8 blog-main">
+    <%= paginate @blogs %>
     <%= render @blogs %>
-    <!-- le code est dans les partials, d'ou le "render" -->
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+    <%= paginate @blogs %>
+</div>
