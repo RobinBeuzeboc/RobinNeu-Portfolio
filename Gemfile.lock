@@ -157,7 +157,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.10)
     nio4r (2.3.1)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     petergate (1.9.1)
@@ -276,6 +276,7 @@ DEPENDENCIES
   kjaald_view_tool!
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.9, >= 4.9.5)
+  nokogiri (>= 1.10.4)
   petergate (~> 1.7)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
