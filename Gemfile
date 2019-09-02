@@ -78,3 +78,4 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 
 gem "nokogiri", ">= 1.10.4"
 
+gem 'cocoon', '~> 1.2', '>= 1.2.14'

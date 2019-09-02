@@ -22,7 +22,6 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build}
 # 3 instances d'items de portfolios avec des technos pour les rendre disponibles 
 end
 
@@ -80,7 +79,7 @@ def destroy
         :body, 
         :main_image, 
         :thumb_image,
-        technologies_attributes: [:name]
+        technologies_attributes: [:id, :name, :_destroy]         
         )
     end
     
