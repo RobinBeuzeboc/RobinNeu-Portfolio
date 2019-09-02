@@ -19,7 +19,7 @@ Bundler.require(*Rails.groups)
 
 module DevPortfolio
   class Application < Rails::Application
-
+    config.eager_load_paths << "#{Rails.root}/lib" 
     config.action_controller.permit_all_parameters = true
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
