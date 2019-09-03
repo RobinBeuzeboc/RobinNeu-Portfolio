@@ -10,21 +10,21 @@
     <hr>
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag "profile.jpg", :size => "260x180", alt: "profile image", class: 'profile-img' %>
-                <div class="skills">
+        <%= image_tag "profile.jpg", width:"100%", alt: "profile image", class: 'profile-img' %>
+        <div class="skills">
           <% @skills.each do |skill| %>
-            <div class="skill">
-              <h5><%= skill.title %></h5>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-striped bg-warning"
-                  role="progressbar"
-                  aria-valuenow="<%= skill.percent_utilized %>"
-                  aria-valuemax="100"
-                  style="width: <%= skill.percent_utilized %>%"
-                ></div>
-              </div>
+          <div class="skill">
+            <h5><%= skill.title %></h5>
+            <div class="progress">
+              <div
+              class="progress-bar progress-bar-striped bg-warning"
+              role="progressbar"
+              aria-valuenow="<%= skill.percent_utilized %>"
+              aria-valuemax="100"
+              style="width: <%= skill.percent_utilized %>%"
+              ></div>
             </div>
+          </div>
           <% end %>
         </div>
       </div>
@@ -36,51 +36,71 @@
 
         <p>
           <button
-            class="btn btn-primary"
-            type="button"
-            data-toggle="collapse"
-            data-target="#jobHistory"
-            aria-expanded="false"
-            aria-controler="jobHistory"
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#jobHistory"
+          aria-expanded="false"
+          aria-controler="jobHistory"
           >
-            Job History
-          </button>
+          Job History
+        </button>
 
-          <button
-            class="btn btn-primary"
-            type="button"
-            data-toggle="collapse"
-            data-target="#education"
-            aria-expanded="false"
-            aria-controler="education"
-          >
-            Education
-          </button>
-        </p>
+        <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#education"
+        aria-expanded="false"
+        aria-controler="education"
+        >
+        Education
+      </button>
+    </p>
 
-        <p>
-          <div class="collapse" id="jobHistory">
-            <div class="card card-block">
-              Job 1
-            </div>
-            <div class="card card-block">
-              Job 2
-            </div>
-          </div>
+    <p>
+      <div class="collapse" id="jobHistory">
+        <div class="card card-block">
 
-          <div class="collapse" id="education">
-            <div class="card card-block">
-              School 1
-            </div>
-            <div class="card card-block">
-              School 2
-            </div>
-            <div class="card card-block">
-              School 3
-            </div>
-          </div>
-        </p>
+          Job 1
+        </div>
+        <div class="card card-block">
+          Job 2
+        </div>
       </div>
-    </div>
+
+      <div class="collapse" id="education">
+        <div class="card card-block">
+          <div class="row align-items-center">
+          <div class="col-md-4">
+            <%= image_tag "ESILV.png", width:"100%" %>
+          </div>
+          <div class="col-md-8" >
+            <Strong>2014-2019</Strong><br>
+            Ecole Supérieure d'Ingénieurs Léonard de Vinci<br>
+            <i>IoT, IT and Big Data Specialization</i>
+          </div>
+          </div>
+        </div>
+
+        
+         <div class="card card-block">
+          <div class="row align-items-center">
+          <div class="col-md-4">
+            <%= image_tag "CU.png", width:"90%" %>
+          </div>
+          <div class="col-md-8" >
+            <Strong>2019</Strong><br>
+            Coventry University <br>
+            <i>Artifical Intelligence - Machine Learning  </i>
+            <br>
+            <i>ERASMUS Semester</i>
+          </div>
+          </div>
+        </div>
+      </div>
+    </p>
   </div>
+</div>
+</div>
 </div>
