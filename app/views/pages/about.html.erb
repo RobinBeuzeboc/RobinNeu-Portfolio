@@ -13,7 +13,7 @@
             <h5><%= skill.title %></h5>
             <div class="progress">
               <div
-              class="progress-bar progress-bar-striped bg-warning"
+              class="progress-bar progress-bar-striped bg-danger"
               role="progressbar"
               aria-valuenow="<%= skill.percent_utilized %>"
               aria-valuemax="100"
@@ -32,7 +32,7 @@
 
         <p>
           <button
-          class="btn btn-primary"
+class="btn btn-outline-secondary"
           type="button"
           data-toggle="collapse"
           data-target="#jobHistory"
@@ -43,8 +43,7 @@
         </button>
 
         <button
-        class="btn btn-primary"
-        type="button"
+class="btn btn-outline-secondary"        type="button"
         data-toggle="collapse"
         data-target="#education"
         aria-expanded="false"
@@ -53,180 +52,178 @@
         Education
       </button>
       <button
-        class="btn btn-primary"
-        type="button"
-        data-toggle="collapse"
-        data-target="#projects"
-        aria-expanded="false"
-        aria-controler="
-        projects"
-        >
-        Projects
-      </button>
+class="btn btn-outline-secondary"      type="button"
+      data-toggle="collapse"
+      data-target="#projects"
+      aria-expanded="false"
+      aria-controler="
+      projects"
+      >
+      Projects
+    </button>
 
-       <button
-        class="btn btn-primary"
-        type="button"
-        data-toggle="collapse"
-        data-target="#Associations"
-        aria-expanded="false"
-        aria-controler="
-        projects"
-        >
-        Associations
-      </button>
-    </p>
+    <button
+class="btn btn-outline-secondary"    type="button"
+    data-toggle="collapse"
+    data-target="#Associations"
+    aria-expanded="false"
+    aria-controler="
+    projects"
+    >
+    Associations
+  </button>
+</p>
 
-    <p>
-      <div class="collapse" id="jobHistory">
-       <h5>Job History</h5>
+<p>
+  <div class="collapse" id="jobHistory">
+   <h5>Job History</h5>
 
-        <div class="card card-block">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-             <%= image_tag "VILOGI.png", width:"100%" %>
-           </div>
-           <div class="col-md-8" >
-            <Strong>2018</Strong><br>
-            VILOGI - Software editor start up for real estate companies<br>
-            <i>5 months - J2EE Developper</i>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-           <%= image_tag "CAP.png", width:"100%" %>
-         </div>
-         <div class="col-md-8" >
-          <Strong>2019</Strong>
-          <br>Capgemini Technology Services<br>
-          <i>6 months - Consultant case management on CRM systems</i>
-        </div>
-      </div>
+   <div class="card card-block">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+       <%= image_tag "VILOGI.png", width:"100%" %>
+     </div>
+     <div class="col-md-8" >
+      <Strong>2018</Strong><br>
+      VILOGI - Software editor start up for real estate companies<br>
+      <i>5 months - J2EE Developper</i>
     </div>
-
   </div>
+</div>
 
-  <div class="collapse" id="education">
-    <h5>Education</h5>
 
-      <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-            <%= image_tag "ESILV.png", width:"100%" %>
-          </div>
-          <div class="col-md-8" >
-            <Strong>2014-2019</Strong>
-            <br>
-            Ecole Supérieure d'Ingénieurs Léonard de Vinci<br>
-            <i>IoT, IT and Big Data Specialization</i>
-          </div>
-        </div>
+<div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "CAP.png", width:"100%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2019</Strong>
+    <br>Capgemini Technology Services<br>
+    <i>6 months - Consultant case management on CRM systems</i>
+  </div>
+</div>
+</div>
+
+</div>
+
+<div class="collapse" id="education">
+  <h5>Education</h5>
+
+  <div class="card card-block">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <%= image_tag "ESILV.png", width:"100%" %>
       </div>
-
-
-      <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-            <%= image_tag "CU.png", width:"90%" %>
-          </div>
-          <div class="col-md-8" >
-            <Strong>2018-2019</Strong><br>
-            Coventry University <br>
-            <i>Artifical Intelligence - Machine Learning  </i>
-            <br>
-            <i>ERASMUS Semester</i>
-          </div>
-        </div>
-      </div>
-    </div>
-     <div class="collapse" id="projects">
-       <h5>Projects</h5>
-
-        <div class="card card-block">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-             <%= image_tag "InMoov.png", width:"100%" %>
-           </div>
-           <div class="col-md-8" >
-            <Strong>2017-2018</Strong><br>
-            Integrate emotions inside the 
-            <a href="http://inmoov.fr/">InMoov</a>
-            Robot<br>
-            <i>1 year project - DevinciBot Association from ESILV</i>
-          </div>
-        </div>
-      </div>
-      <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-           <%= image_tag "Lock.png", width:"100%" %>
-         </div>
-         <div class="col-md-8" >
-          <Strong>2016-2017</Strong><br>
-          Create a low cost connected lock connected to the web<br>
-          <i>1 year project</i>
-        </div>
-      </div>
-    </div>
-    <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-           <%= image_tag "Wrist.png", width:"100%" %>
-         </div>
-         <div class="col-md-8" >
-          <Strong>2015-2016</Strong><br>
-          Create a connected wristlet for children and seniors <br>
-          <i>6 months project</i>
-        </div>
+      <div class="col-md-8" >
+        <Strong>2014-2019</Strong>
+        <br>
+        Ecole Supérieure d'Ingénieurs Léonard de Vinci<br>
+        <i>IoT, IT and Big Data Specialization</i>
       </div>
     </div>
   </div>
 
-   <div class="collapse" id="Associations">
-       <h5>Associations</h5>
 
-        <div class="card card-block">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-             <%= image_tag "3V.png", width:"80%" %>
-           </div>
-           <div class="col-md-8" >
-            <Strong>2015-2018</Strong><br>
-            Veni, Vidi, deVinci: Student association welcoming and sponsoring new students<br>
-            <i>Co-founder and President of association</i>
-          </div>
-        </div>
+  <div class="card card-block">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <%= image_tag "CU.png", width:"90%" %>
       </div>
-      <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-           <%= image_tag "ESILV.png", width:"100%" %>
-         </div>
-         <div class="col-md-8" >
-          <Strong>2014-2016</Strong><br>
-          Present the ESILV's programs to future engineers<br>
-          <i>"Expert" in promoting ESILV</i>
-        </div>
-      </div>
-    </div>
-    <div class="card card-block">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-           <%= image_tag "ESILV.png", width:"100%" %>
-         </div>
-         <div class="col-md-8" >
-          <Strong>2016-2018</Strong><br>
-          Manage the student promoting ESILV to future engineers<br>
-          <i>"Manager" in promoting ESILV</i>
-        </div>
+      <div class="col-md-8" >
+        <Strong>2018-2019</Strong><br>
+        Coventry University <br>
+        <i>Artifical Intelligence - Machine Learning  </i>
+        <br>
+        <i>ERASMUS Semester</i>
       </div>
     </div>
   </div>
-  </p>
+</div>
+<div class="collapse" id="projects">
+ <h5>Projects</h5>
+
+ <div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "InMoov.png", width:"100%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2017-2018</Strong><br>
+    Integrate emotions inside the 
+    <a href="http://inmoov.fr/">InMoov</a>
+    Robot<br>
+    <i>1 year project - DevinciBot Association from ESILV</i>
+  </div>
+</div>
+</div>
+<div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "Lock.png", width:"100%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2016-2017</Strong><br>
+    Create a low cost connected lock connected to the web<br>
+    <i>1 year project</i>
+  </div>
+</div>
+</div>
+<div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "Wrist.png", width:"100%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2015-2016</Strong><br>
+    Create a connected wristlet for children and seniors <br>
+    <i>6 months project</i>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="collapse" id="Associations">
+ <h5>Associations</h5>
+
+ <div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "3V.png", width:"80%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2015-2018</Strong><br>
+    Veni, Vidi, deVinci: Student association welcoming and sponsoring new students<br>
+    <i>Co-founder and President of association</i>
+  </div>
+</div>
+</div>
+<div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "ESILV.png", width:"100%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2014-2016</Strong><br>
+    Present the ESILV's programs to future engineers<br>
+    <i>"Expert" in promoting ESILV</i>
+  </div>
+</div>
+</div>
+<div class="card card-block">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+     <%= image_tag "ESILV.png", width:"100%" %>
+   </div>
+   <div class="col-md-8" >
+    <Strong>2016-2018</Strong><br>
+    Manage the student promoting ESILV to future engineers<br>
+    <i>"Manager" in promoting ESILV</i>
+  </div>
+</div>
+</div>
+</div>
+</p>
 </div>
 </div>
 </div>

@@ -5,31 +5,48 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-3.times do |topic|
-	Topic.create!(
-		title: "Topic #{topic}"
-		)
-end
 
-10.times do |blog|
-Blog.create!(
-	title: "My Blog Post #{blog}", 
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est a tortor tincidunt mattis. Aenean dictum tellus vitae varius varius. Praesent sodales consequat neque nec vestibulum. Cras fringilla erat nibh, quis rutrum magna tempus in. Aenean auctor tempus tellus, eget hendrerit lacus laoreet ut. Nam tristique elementum nisl vel placerat. Vivamus id quam vitae eros convallis auctor ac sed lacus. Vestibulum id nisl libero. Nunc a metus in diam luctus imperdiet eu ac dui. Pellentesque fringilla ante sed dui eleifend, id vehicula dolor dignissim. Nulla egestas dolor at justo scelerisque, vel bibendum libero ultricies. Vivamus fringilla, odio ut rutrum euismod, est orci pulvinar arcu, sit amet dignissim enim lectus eu eros. Quisque fringilla interdum risus, accumsan bibendum augue dapibus vitae. Aliquam venenatis ullamcorper nisl at congue. ",
-	topic_id: Topic.last.id
-	)
-end
-puts "10 blogs"
-
-5.times do |skill|
-	Skill.create!(
-		title: "Rails #{skill}",
-		percent_utilized: 15
-		)
-end
-puts "5 blogs"
+Topic.create!(
+	title: "General"
+)
+Topic.create!(
+	title: "Coding"
+)
 
 
-8.times do |portfolio|
+Skill.create!(
+	title: "Java",
+	percent_utilized: 35
+)
+
+Skill.create!(
+	title: "Relational databases",
+	percent_utilized: 35
+)
+
+Skill.create!(
+	title: "Pyton",
+	percent_utilized: 20
+)
+
+Skill.create!(
+	title: "Javascript",
+	percent_utilized: 15
+)
+
+Skill.create!(
+	title: "Ruby on Rails",
+	percent_utilized: 10
+)
+
+Skill.create!(
+	title: "Machine Learning",
+	percent_utilized: 10
+)
+
+
+
+5.times do |portfolio|
 	Portfolio.create!(
 		title: "Portfolio title #{portfolio}",
 		subtitle: "Ruby",
@@ -50,8 +67,6 @@ end
 		)
 end
 
-puts "9 portfolio items"
-
 3.times do |technology|
 	Portfolio.last.technologies.create!(
 		name: "Technology #{technology}"
@@ -59,3 +74,5 @@ puts "9 portfolio items"
 end
 
 puts "3 technos created"
+
+

@@ -43,7 +43,7 @@ body {
 }
 
    
-h1, .h1,
+h1, .h1, 
 h2, .h2,
 h3, .h3,
 h4, .h4,
@@ -93,7 +93,6 @@ h6, .h6{
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
-  color: rgba(255,255,255,.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -108,8 +107,8 @@ h6, .h6{
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: black;
+  border-bottom-color: black;
 }
 
 @media (min-width: 48em) {
@@ -128,10 +127,12 @@ h6, .h6{
 
 .cover {
   padding: 0 1.5rem;
+  color: black;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
+  color: black;
 }
 
 
@@ -140,7 +141,7 @@ h6, .h6{
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  color: black;
 }
 
 
@@ -166,6 +167,7 @@ h6, .h6{
   .masthead,
   .mastfoot,
   .cover-container {
+  color: black;
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
@@ -223,7 +225,7 @@ h6, .h6{
 }
 
 .app-footer {
-  color: white;
+  color: black;
 }
 
 .tech-news {
